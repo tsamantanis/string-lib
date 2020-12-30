@@ -29,3 +29,5 @@ camelCase = (str) => {
         }
     }).join('');
 }
+
+shift = (str, numChars) => str.trim().slice(numChars, str.length) + str.trim().slice(0, numChars);
