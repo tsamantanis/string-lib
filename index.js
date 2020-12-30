@@ -8,3 +8,8 @@ capitalizeHeadline = (str) => {
     const notCaps = ['the', 'in', 'a', 'an', 'and', 'but', 'for', 'at', 'by'];
     return str.split(' ').map((word) => !notCaps.includes(word) ? capitalize(word) : word).join(' ');
 }
+
+isEmpty = (str) => {
+    const emptyChars = ['\n', '\r', '\n'];
+    return str.trim().split('').filter((character) => !emptyChars.includes(character)).length === 0;
+}
