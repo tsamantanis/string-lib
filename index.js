@@ -13,3 +13,9 @@ isEmpty = (str) => {
     const emptyChars = ['\n', '\r', '\n'];
     return str.trim().split('').filter((character) => !emptyChars.includes(character)).length === 0;
 }
+
+removeExtraSpaces = (str) => str.trim().split(' ').filter((word) => word !== '').join(' ');
+
+kabobCase = (str) => removeExtraSpaces(str.toLowerCase().replace(/[^a-zA-Z ]/g, '')).split(' ').join('-');
+
+snakeCase = (str) => removeExtraSpaces(str.toLowerCase().replace(/[^a-zA-Z ]/g, '')).split(' ').join('_');
