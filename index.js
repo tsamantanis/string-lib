@@ -19,3 +19,13 @@ removeExtraSpaces = (str) => str.trim().split(' ').filter((word) => word !== '')
 kabobCase = (str) => removeExtraSpaces(str.toLowerCase().replace(/[^a-zA-Z ]/g, '')).split(' ').join('-');
 
 snakeCase = (str) => removeExtraSpaces(str.toLowerCase().replace(/[^a-zA-Z ]/g, '')).split(' ').join('_');
+
+camelCase = (str) => {
+    return str.trim().split(' ').map((word, i) => {
+        if (i !== 0) {
+            return capitalize(word.replace(/[^a-zA-Z ]/g, ''))
+        } else {
+            return word.replace(/[^a-zA-Z ]/g, '').toLowerCase();
+        }
+    }).join('');
+}
