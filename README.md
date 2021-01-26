@@ -27,3 +27,10 @@ const stringLib = require("@tsamantanis/string-lib")
 
 console.log(stringLib.camelCase("Hello World!")) // returns the string input in camel case
 ```
+
+### Example using String.prototype
+```
+const stringLib = require("@tsamantanis/string-lib")
+
+console.log("Hello World!".camelCase) // returns the string input in camel case
+```
