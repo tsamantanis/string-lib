@@ -33,3 +33,27 @@ camelCase = (str) => {
 shift = (str, numChars) => str.trim().slice(numChars, str.length) + str.trim().slice(0, numChars);
 
 makeHashTag = (str) => '#' + capitalizeWords(str.trim()).split(' ').sort((a, b) => b.length - a.length).slice(0, 3).join('');
+
+String.prototype.capitalize = function () {
+    return capitalize(this);
+}
+
+String.prototype.capitalizeWords = function () {
+    return capitalizeWords(this);
+}
+
+String.prototype.capitalizeHeadline = function () {
+    return capitalizeHeadline(this);
+}
+
+String.prototype.kabobCase = function () {
+    return kabobCase(this);
+}
+
+String.prototype.snakeCase = function () {
+    return snakeCase(this);
+}
+
+String.prototype.camelCase = function () {
+    return camelCase(this);
+}
