@@ -57,3 +57,16 @@ String.prototype.snakeCase = function () {
 String.prototype.camelCase = function () {
     return camelCase(this);
 }
+
+module.exports = {
+    capitalize,
+    capitalizeWords,
+    capitalizeHeadline,
+    isEmpty,
+    removeExtraSpaces,
+    kabobCase,
+    snakeCase,
+    camelCase,
+    shift,
+    makeHashTag
+}
