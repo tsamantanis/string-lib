@@ -21,7 +21,7 @@ kabobCase = (str) => removeExtraSpaces(str.toLowerCase().replace(/[^a-zA-Z ]/g, 
 snakeCase = (str) => removeExtraSpaces(str.toLowerCase().replace(/[^a-zA-Z ]/g, '')).split(' ').join('_');
 
 camelCase = (str) => {
-    return str.trim().split(' ').map((word, i) => {
+    return str.toLowerCase().trim().split(' ').map((word, i) => {
         if (i !== 0) {
             return capitalize(word.replace(/[^a-zA-Z ]/g, ''))
         } else {
@@ -60,6 +60,7 @@ String.prototype.camelCase = function () {
 
 module.exports = {
     capitalize,
+    allCaps,
     capitalizeWords,
     capitalizeHeadline,
     isEmpty,
