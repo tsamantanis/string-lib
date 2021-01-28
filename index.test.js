@@ -60,3 +60,16 @@ test('shift', () => {
     expect(sLib.shift("Foo Bar", 0)).toBe('Foo Bar');
     expect(sLib.shift("What! is this#", 16)).toBe('What! is this#');
 })
+
+test('oddCaps', () => {
+    expect(sLib.oddCaps("hello")).toBe('HeLlO');
+    expect(sLib.oddCaps("WORLD")).toBe('WoRlD');
+    expect(sLib.oddCaps("hello world")).toBe('HeLlO WoRlD');
+    expect(sLib.oddCaps("foo bar")).toBe('FoO BaR');
+});
+
+test('evenCaps', () => {
+    expect(sLib.evenCaps("hello")).toBe('hElLo');
+    expect(sLib.evenCaps("WORLD")).toBe('wOrLd');
+    expect(sLib.evenCaps("foo bar")).toBe('fOo bAr');
+});

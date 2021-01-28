@@ -32,7 +32,9 @@ camelCase = (str) => {
 
 shift = (str, numChars) => str.trim().slice(numChars, str.length) + str.trim().slice(0, numChars);
 
-makeHashTag = (str) => '#' + capitalizeWords(str.trim()).split(' ').sort((a, b) => b.length - a.length).slice(0, 3).join('');
+oddCaps = (str) => str.split('').map((character, index) => index % 2 ? character.toLowerCase() : character.toUpperCase()).join('')
+
+evenCaps = (str) => str.split('').map((character, index) => index % 2 ? character.toUpperCase() : character.toLowerCase()).join('')
 
 String.prototype.capitalize = function () {
     return capitalize(this);
@@ -58,6 +60,14 @@ String.prototype.camelCase = function () {
     return camelCase(this);
 }
 
+String.prototype.oddCaps = function () {
+    return oddCaps(this);
+}
+
+String.prototype.evenCaps = function () {
+    return evenCaps(this);
+}
+
 module.exports = {
     capitalize,
     allCaps,
@@ -69,5 +79,6 @@ module.exports = {
     snakeCase,
     camelCase,
     shift,
-    makeHashTag
+    oddCaps,
+    evenCaps
 }
