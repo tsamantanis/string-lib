@@ -40,12 +40,20 @@ String.prototype.capitalize = function () {
     return capitalize(this);
 }
 
+String.prototype.allCaps = function () {
+    return allCaps(this);
+}
+
 String.prototype.capitalizeWords = function () {
     return capitalizeWords(this);
 }
 
 String.prototype.capitalizeHeadline = function () {
     return capitalizeHeadline(this);
+}
+
+String.prototype.removeExtraSpaces = function () {
+    return removeExtraSpaces(this);
 }
 
 String.prototype.kabobCase = function () {
