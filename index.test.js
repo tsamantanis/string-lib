@@ -19,6 +19,13 @@ test('capitalizeWords', () => {
     expect(sLib.capitalizeWords("foo bar")).toBe('Foo Bar');
 });
 
+test('capitalizeHeadline', () => {
+    expect(sLib.capitalizeHeadline("hello")).toBe('Hello');
+    expect(sLib.capitalizeHeadline("WORLD")).toBe('WORLD');
+    expect(sLib.capitalizeHeadline("foo bar")).toBe('Foo Bar');
+    expect(sLib.capitalizeHeadline("this is a headline")).toBe('This Is a Headline');
+});
+
 test('removeExtraSpaces', () => {
     expect(sLib.removeExtraSpaces("hello   ")).toBe('hello');
     expect(sLib.removeExtraSpaces("WORLD")).toBe('WORLD');
@@ -45,4 +52,11 @@ test('camelCase', () => {
     expect(sLib.camelCase("HELLO WORLD")).toBe('helloWorld');
     expect(sLib.camelCase("Foo Bar")).toBe('fooBar');
     expect(sLib.camelCase("What! is this#")).toBe('whatIsThis');
+})
+
+test('shift', () => {
+    expect(sLib.shift("hello world", 3)).toBe('lo worldhel');
+    expect(sLib.shift("HELLO WORLD", 2)).toBe('LLO WORLDHE');
+    expect(sLib.shift("Foo Bar", 0)).toBe('Foo Bar');
+    expect(sLib.shift("What! is this#", 16)).toBe('What! is this#');
 })
