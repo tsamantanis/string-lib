@@ -4,6 +4,7 @@ A library of string manipulation functions to help Javascript developers.
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/@tsamantanis/string-lib?style=for-the-badge)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/tsamantanis/string-lib?style=for-the-badge)
+![Travis (.org)](https://img.shields.io/travis/tsamantanis/string-lib?style=for-the-badge)
 
 ## Installation
 
